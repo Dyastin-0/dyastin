@@ -1,0 +1,15 @@
+[Unit]
+Description=Dyastin
+After=network.target multi-user.target
+
+[Service]
+User=ubuntu
+
+WorkingDirectory=/home/ubuntu/dyastin
+ExecStart=/usr/bin/npm start
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=dyastin
+
+[Install]
+WantedBy=multi-user.target
