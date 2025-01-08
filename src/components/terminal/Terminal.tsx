@@ -66,7 +66,7 @@ const Terminal: React.FC = () => {
           Filespace
         </a>,
         <a
-          href="https://gitsene.dyastin.tech"
+          href="https://gitsense.dyastin.tech"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary-highlight underline"
