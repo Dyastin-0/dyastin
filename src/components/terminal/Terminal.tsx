@@ -100,7 +100,7 @@ const Terminal: React.FC = () => {
       description: "Tools I use",
       execute: () => [
         <span className="text-primary-highlight">Backend</span>,
-        <span>Go, Node.js. Express, Socket.IO, MongoDB, Firebase</span>,
+        <span>Go, Node.js, Express, Socket.IO, MongoDB, Firebase</span>,
         <span className="text-primary-highlight">Frontend</span>,
         <span>React, Vite, Framer Motion, Tailwind CSS</span>,
         <span className="text-primary-highlight">Data Fetching</span>,
