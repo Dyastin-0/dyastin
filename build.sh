@@ -21,6 +21,8 @@ copy_file ./$SERVICE_FILE $SERVICE_PATH
 
 echo "$APP: Building the project..."
 
+git pull
+
 npm run build
 
 echo "$APP: Reloading systemd daemon..."
