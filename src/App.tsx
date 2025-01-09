@@ -1,8 +1,8 @@
-import React from 'react';
-import Terminal from './components/terminal/Terminal';
+import React from "react";
+import TerminalWindow from "./components/terminal_window/TerminalWindow";
 
 const App: React.FC = () => {
-  return <Terminal />;
+  return <TerminalWindow />;
 };
 
 export default App;

@@ -1,13 +1,12 @@
 import TerminalInput from "./TerminalInput";
 
 export interface CommandHandler {
-  command: string;
   description: string;
   execute: () => React.ReactNode[];
 }
 
 interface CommandHandlerProps {
-  commandHandlers: CommandHandler[];
+  commandHandlers: Record<string, CommandHandler>;
   input: string;
   setOutput: React.Dispatch<React.SetStateAction<React.ReactNode[]>>;
   setInput: React.Dispatch<React.SetStateAction<string>>;
@@ -19,13 +18,8 @@ const CommandHandler: React.FC<CommandHandlerProps> = ({
   setOutput,
   setInput,
 }) => {
-  const findCommandHandler = (command: string): CommandHandler | undefined =>
-    commandHandlers.find(
-      (handler) => handler.command === command.toLowerCase()
-    );
-
   const handleCommand = (command: string): React.ReactNode[] => {
-    const handler = findCommandHandler(command);
+    const handler = commandHandlers[command.toLowerCase()];
     if (handler) {
       return handler.execute();
     }

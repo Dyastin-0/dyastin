@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
-import CommandHandler, {
-  CommandHandler as CommandHandlerType,
-} from "./CommandHandler";
+import CommandHandler from "./CommandHandler";
 import OutputLine from "./OutputLine";
 
 const Terminal: React.FC = () => {
   const [input, setInput] = useState<string>("");
   const [output, setOutput] = useState<React.ReactNode[]>([]);
 
-  const commandHandlers: CommandHandlerType[] = [
-    {
-      command: "!help",
+  const commandHandlers = {
+    "!help": {
       description: "List all available commands",
       execute: () => [
         <span>Available Commands:</span>,
@@ -32,8 +29,7 @@ const Terminal: React.FC = () => {
         </span>,
       ],
     },
-    {
-      command: "about",
+    about: {
       description: "Learn about me",
       execute: () => [
         <span>
@@ -45,8 +41,7 @@ const Terminal: React.FC = () => {
         </span>,
       ],
     },
-    {
-      command: "projects",
+    projects: {
       description: "See my work",
       execute: () => [
         <a
@@ -83,8 +78,7 @@ const Terminal: React.FC = () => {
         </a>,
       ],
     },
-    {
-      command: "contact",
+    contact: {
       description: "Get in touch",
       execute: () => [
         <a
@@ -95,8 +89,7 @@ const Terminal: React.FC = () => {
         </a>,
       ],
     },
-    {
-      command: "tools",
+    tools: {
       description: "Tools I use",
       execute: () => [
         <span className="text-primary-highlight">Backend</span>,
@@ -112,20 +105,17 @@ const Terminal: React.FC = () => {
         <span>Git, GitHub</span>,
       ],
     },
-    {
-      command: "clear",
+    clear: {
       description: "Clear the terminal",
       execute: () => {
         setOutput([]);
         return [];
       },
     },
-  ];
+  };
 
   useEffect(() => {
-    const initialCommands = commandHandlers
-      .find((handler) => handler.command === "!help")
-      ?.execute();
+    const initialCommands = commandHandlers["!help"].execute();
     setOutput(initialCommands || []);
   }, []);
 
