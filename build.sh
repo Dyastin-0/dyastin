@@ -21,7 +21,11 @@ copy_file ./$SERVICE_FILE $SERVICE_PATH
 
 echo "$APP: Building the project..."
 
+echo "$APP: Pulling latest changes..."
 git pull
+
+echo "$APP: Installing dependencies..."
+npm i
 
 npm run build
 
