@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import CommandHandler from "./CommandHandler";
 import OutputLine from "./OutputLine";
 
-const Terminal: React.FC = () => {
-  const [input, setInput] = useState<string>("");
-  const [output, setOutput] = useState<React.ReactNode[]>([]);
+interface TerminalProps {
+  input: string;
+  output: React.ReactNode[];
+  setInput: React.Dispatch<React.SetStateAction<string>>;
+  setOutput: React.Dispatch<React.SetStateAction<React.ReactNode[]>>;
+}
 
+const Terminal: React.FC<TerminalProps> = ({
+  input,
+  output,
+  setInput,
+  setOutput,
+}) => {
   const commandHandlers = {
     "!help": {
       description: "List all available commands",
