@@ -14,11 +14,9 @@ const Tab: React.FC<TabProps> = ({ id, title, isActive, onClick, onClose }) => {
   return (
     <div
       onClick={() => onClick(id)}
-      className={`flex items-center gap-2 p-2 cursor-pointer rounded-lg transition-colors duration-200 ${
-        isActive
-          ? "bg-primary text-white"
-          : "bg-secondary text-primary-foreground hover:bg-primary hover:text-white"
-      }`}
+      className={`flex items-center gap-2 p-2 cursor-pointer rounded-lg transition-colors duration-200
+        text-primary-foreground text-xs
+        ${isActive ? "bg-primary" : "bg-secondary hover:bg-primary"}`}
     >
       <span className="truncate">{title}</span>
       <button

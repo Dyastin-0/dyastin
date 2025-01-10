@@ -129,7 +129,7 @@ const Terminal: React.FC<TerminalProps> = ({
   }, []);
 
   return (
-    <div className="flex flex-col text-primary-foreground font-mono h-screen">
+    <div className="flex flex-col text-primary-foreground font-mono h-screen text-sm">
       <div className="bg-secondary-secondary text-secondary-foreground p-2 rounded-t-md">
         <span className="text-primary-highlight">Dyastin</span>@portfolio:~
       </div>

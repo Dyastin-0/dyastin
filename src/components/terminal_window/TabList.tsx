@@ -36,7 +36,7 @@ const TabList: React.FC<TabListProps> = ({
       <button
         onClick={onAddTab}
         className="flex justify-center items-center w-[40px] h-[40px] bg-secondary rounded-lg
-        hover:bg-primary transition-colors duration-200 shadow-md"
+        hover:bg-primary transition-colors duration-200 shadow-md text-sm"
       >
         <FontAwesomeIcon icon={faPlus} />
       </button>
