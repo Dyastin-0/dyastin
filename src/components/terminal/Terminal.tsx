@@ -63,7 +63,7 @@ const Terminal: React.FC<TerminalProps> = ({
             mrps
           </a>
           <span>
-            - A minimal, automatic HTTPs reverse proxy server built with Go.
+            - A minimal, automatic HTTPS reverse proxy server built with Go.
           </span>
         </div>,
         <div className="flex gap-2">
