@@ -53,6 +53,19 @@ const Terminal: React.FC<TerminalProps> = ({
     projects: {
       description: "See my work",
       execute: () => [
+        <div className="flex gap-2">
+          <a
+            href="https://github.com/Dyastin-0/mrps"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-highlight underline"
+          >
+            mrps
+          </a>
+          <span>
+            - A minimal, automatic HTTPs reverse proxy server built with Go.
+          </span>
+        </div>,
         <a
           href="https://filmpin.dyastin.tech"
           target="_blank"
