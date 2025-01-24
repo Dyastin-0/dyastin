@@ -66,38 +66,59 @@ const Terminal: React.FC<TerminalProps> = ({
             - A minimal, automatic HTTPs reverse proxy server built with Go.
           </span>
         </div>,
-        <a
-          href="https://filmpin.dyastin.tech"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary-highlight underline"
-        >
-          Filmpin
-        </a>,
-        <a
-          href="https://filespace.dyastin.tech"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary-highlight underline"
-        >
-          Filespace
-        </a>,
-        <a
-          href="https://gitsense.dyastin.tech"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary-highlight underline"
-        >
-          Gitsense
-        </a>,
-        <a
-          href="https://omnisense.dyastin.tech"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary-highlight underline"
-        >
-          Omnisense
-        </a>,
+        <div className="flex gap-2">
+          <a
+            href="https://filmpin.dyastin.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-highlight underline"
+          >
+            Filmpin
+          </a>
+          <span>
+            - A movie browsing web application that fetches data from the TMDB.
+          </span>
+        </div>,
+        <div className="flex gap-2">
+          <a
+            href="https://filespace.dyastin.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-highlight underline"
+          >
+            Filespace
+          </a>
+          <span>
+            - A simple cloud storage with built-in file browser and file
+            sharing.
+          </span>
+        </div>,
+        <div className="flex gap-2">
+          <a
+            href="https://gitsense.dyastin.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-highlight underline"
+          >
+            Gitsense
+          </a>
+          <span>
+            - A simple tool that uses Github oauth2 to create webhooks and
+            configure ssh connection to execute custom script on webhook
+            trigger.
+          </span>
+        </div>,
+        <div className="flex gap-2">
+          <a
+            href="https://omnisense.dyastin.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-highlight underline"
+          >
+            Omnisense
+          </a>
+          - An automation, scheduling, and device monitoring app.
+        </div>,
       ],
     },
     contact: {
